@@ -43,6 +43,7 @@ export class CalendarService {
       pickMode = pickModes.SINGLE,
       color = defaults.COLOR,
       weekdays = defaults.WEEKS_FORMAT,
+      monthsName = defaults.MONTH_FORMAT,
       daysConfig = _daysConfig,
       disableWeeks = _disableWeeks,
       showAdjacentMonthDay = true
@@ -67,6 +68,7 @@ export class CalendarService {
       monthFormat,
       title,
       weekdays,
+      monthsName,
       daysConfig,
       step,
       showYearPicker,

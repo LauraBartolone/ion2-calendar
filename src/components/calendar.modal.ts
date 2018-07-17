@@ -29,7 +29,7 @@ import { pickModes } from "../config";
         </ion-buttons>
 
       </ion-navbar>
-      
+
       <ng-content select="[sub-header]"></ng-content>
 
       <ion-calendar-week
@@ -46,7 +46,9 @@ import { pickModes } from "../config";
       <div #months>
         <ng-template ngFor let-month [ngForOf]="calendarMonths" [ngForTrackBy]="trackByIndex" let-i="index">
           <div class="month-box" [attr.id]="'month-' + i">
-            <h4 class="text-center month-title">{{_monthFormat(month.original.date)}}</h4>
+            <h4 class="text-center month-title">
+              {{ _d.monthsName[i] }}
+            </h4>
             <ion-calendar-month [month]="month"
                                 [pickMode]="_d.pickMode"
                                 [isSaveHistory]="_d.isSaveHistory"
